@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>Inspire</title>
+</head>
+
+<body>
+  <!-- WEATHER -->
+  <header>
+    <div class="row m-0 text-shadow text-light">
+      <div class="col-md-12 justify-content-end">
+        <div id="weather"></div>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="container-fluid d-flex flex-column">
+
+
+    <!-- CLOCK -->
+
+    <div class="row d-flex justify-content-center text-light">
+      <div class="col-md-12 d-flex justify-content-center">
+        <h1 id="clock"></h1>
+      </div>
+    </div>
+
+
+
+
+    <!-- TO DO LIST -->
+    <div class="row d-flex justify-content-end align-items-end">
+
+      <div class="col-3 d-flex justify-content-end ">
+        <div class="card">
+          <div class="card-body d-flex flex-column justify-content-between ">
+            <div>
+              <div>
+                <h4 class="card-title underline no-select"><i class="no-select mdi mdi-clipboard-edit-outline"></i>
+                  <span>
+                    <p><u>To-Do List</u></p>
+                  </span>
+                </h4>
+                <p id="complete"></p>
+              </div>
+              <div id="checktodo"></div>
+            </div>
+            <div>
+              <form onsubmit="app.todoController.createTodo()">
+                <input type="text" class="form-control" minlength="3" maxlength="40" id="description"
+                  placeholder="New Todo" value="" required>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- QUOTE -->
+
+  <footer>
+    <div class="row m-0">
+      <div class="col-md-12 d-flex justify-content-center">
+        <h1 id="quote" class="text-light text-shadow ms-2"></h1>
+      </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>
+  <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
