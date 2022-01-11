@@ -1,5 +1,3 @@
-
-
 function _updateClock() {
     let now = new Date(),
         hours = now.getHours(),
@@ -10,24 +8,16 @@ function _updateClock() {
 
     let time = now.getHours() % 12 || 12 + ":" + now.getMinutes();
 
-
-
     document.getElementById('clock').innerText = [time] + ' ' + [amPm] + ' ' + [date];
-
 }
-
-
 
 export class ClockController {
     constructor() {
         this.setClock()
         _updateClock()
-
-
     }
     setClock() {
         setInterval('', 1000)
         _updateClock()
     }
-
 }

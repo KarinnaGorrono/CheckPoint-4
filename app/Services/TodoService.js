@@ -1,8 +1,6 @@
 import { ProxyState } from "../AppState.js";
+import { sandboxApi } from "./AxiosService.js";
 import { Todo } from "../Models/Todo.js";
-import { sandboxApi } from "./AxiosService.js"
-
-
 
 class TodoService {
     async getTodos() {
@@ -32,6 +30,7 @@ class TodoService {
 
         }
     }
+
     async check(id) {
         const todo = ProxyState.todo.find(t => t.id == id)
         todo.completed = !todo.completed
@@ -48,10 +47,6 @@ class TodoService {
         let t = ProxyState.todo
         t.forEach(t => t.completed ? ProxyState.checked++ : '')
     }
-
-
-
 }
-
 
 export const todoService = new TodoService()

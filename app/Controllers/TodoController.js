@@ -15,7 +15,6 @@ export class TodoController {
         ProxyState.on('count', _draw)
         ProxyState.on('checked', _draw)
         this.getTodos()
-
     }
 
     createTodo() {
@@ -30,6 +29,22 @@ export class TodoController {
         formElem.reset()
     }
 
+    async getTodos() {
+        try {
+            await todoService.getTodos()
+        } catch (error) {
+            console.error('Error from Todos Controller', error)
+        }
+    }
+
+    async addTodo(id) {
+        try {
+            // @ts-ignore
+            await todoService.addTodo(id)
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
     async removeTodo(id) {
         try {
@@ -39,22 +54,6 @@ export class TodoController {
         }
     }
 
-    async addTodo(id) {
-        try {
-            // @ts-ignore
-            await todoService.addTodo(id)
-
-        } catch (error) {
-            console.error(error);
-        }
-    }
-    async getTodos() {
-        try {
-            await todoService.getTodos()
-        } catch (error) {
-            console.error(error)
-        }
-    }
     async check(id) {
         try {
             await todoService.check(id)
@@ -62,14 +61,4 @@ export class TodoController {
             console.error(error)
         }
     }
-
-
-
-
-
-
-
-
-
-
 }

@@ -1,5 +1,3 @@
-
-
 export class Todo {
   constructor(data) {
     this.id = data.id
@@ -7,7 +5,6 @@ export class Todo {
     this.user = data.user
     this.description = data.description
   }
-
 
   get Template() {
     return `

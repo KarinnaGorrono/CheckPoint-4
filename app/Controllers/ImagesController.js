@@ -1,4 +1,4 @@
-import { ProxyState } from "../AppState.js"
+import { ProxyState } from "../AppState.js";
 import { imagesService } from "../Services/ImagesService.js";
 
 function _drawImage() {

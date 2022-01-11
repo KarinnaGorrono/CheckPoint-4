@@ -1,6 +1,6 @@
-import { ProxyState } from "../AppState.js"
-import { Image } from "../Models/Image.js"
-import { sandboxApi } from "./AxiosService.js"
+import { ProxyState } from "../AppState.js";
+import { Image } from "../Models/Image.js";
+import { sandboxApi } from "./AxiosService.js";
 
 class ImagesService {
 

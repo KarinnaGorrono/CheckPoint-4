@@ -1,6 +1,5 @@
 import { ProxyState } from "../AppState.js";
-import { quotesService } from "../Services/QuotesService.js"
-
+import { quotesService } from "../Services/QuotesService.js";
 
 function _drawQuote() {
   let quote = ProxyState.quote
@@ -8,8 +7,6 @@ function _drawQuote() {
   quoteElem.innerHTML = quote.Template
 
 }
-
-
 
 export class QuotesController {
   constructor() {
@@ -23,7 +20,6 @@ export class QuotesController {
       console.error("Error from Quote Controller", error)
     }
   }
-
 }
 
 
